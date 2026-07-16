@@ -1,23 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: serif;
-    background-color: #f0f0f0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
+    color: #333;
 }
 
 .container {
-    border: 2px solid #000;
-    background: #fff;
-    padding: 15px;
-    width: 300px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    transition: transform 0.3s ease;
 }
 
-.input-group, .select-row, .result-box {
-    margin-bottom: 15px;
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1e3c72;
+    font-weight: 700;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input[type="number"], select {
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+    background-color: #f8fafc;
+}
+
+input[type="number"]:focus, select:focus {
+    border-color: #2a5298;
+}
+
+.select-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.select-group {
+    display: flex;
+    flex-direction: column;
 }
 
 button {
     width: 100%;
-    padding: 10px;
-    background-color: lightgray;
+    padding: 14px;
+    background-color: #2a5298;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #1e3c72;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.result-box {
+    margin-top: 25px;
+    background-color: #f1f5f9;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #2a5298;
+    text-align: center;
+}
+
+.result-box h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #64748b;
+    margin-bottom: 5px;
+}
+
+#resultText {
+    font-size: 18px;
+    color: #0f172a;
+    word-break: break-all;
 }
