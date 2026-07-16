@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Unidades de Tempo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⏳ Conversor de Tempo</h1>
+        
+        <div class="input-group">
+            <label id="label-amount" for="amount">Digitar valor:</label>
+            <input type="number" id="amount" value="1" min="0" step="any">
+        </div>
+
+        <div class="select-row">
+            <div class="select-group">
+                <label for="fromUnit">De:</label>
+                <select id="fromUnit">
+                    <option value="ms">Milissegundos (ms)</option>
+                    <option value="s" selected>Segundos (s)</option>
+                    <option value="min">Minutos (min)</option>
+                    <option value="h">Horas (h)</option>
+                    <option value="d">Dias (d)</option>
+                    <option value="sem">Semanas (sem)</option>
+                </select>
+            </div>
+
+            <div class="select-group">
+                <label for="toUnit">Para:</label>
+                <select id="toUnit">
+                    <option value="ms">Milissegundos (ms)</option>
+                    <option value="s">Segundos (s)</option>
+                    <option value="min" selected>Minutos (min)</option>
+                    <option value="h">Horas (h)</option>
+                    <option value="d">Dias (d)</option>
+                    <option value="sem">Semanas (sem)</option>
+                </select>
+            </div>
+        </div>
+
+        <button id="convertBtn">Converter</button>
+
+        <div class="result-box">
+            <h2>Resultado:</h2>
+            <p id="resultText">1 segundo = 0.0167 minutos</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
